@@ -35,7 +35,9 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-console.log("You are correct!")
+console.log(`${candidateName}, You are correct!`)
+}else {
+  console.log(`${candidateName}, Sorry, better luck next time!`);
 }
 
 
@@ -48,7 +50,7 @@ console.log("You are correct!")
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("${candidateName}, We welcome you to the club");
+   console.log(`${candidateName}, We welcome you to the club`);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
